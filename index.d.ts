@@ -72,7 +72,6 @@ export interface PickerSelectProps {
     children?: React.ReactNode;
     onOpen?: () => void;
     useNativeAndroidPickerStyle?: boolean;
-    fixAndroidTouchableBug?: boolean;
     doneText?: string;
     onDonePress?: () => void;
     onUpArrow?: () => void;
