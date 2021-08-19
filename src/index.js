@@ -478,9 +478,8 @@ export default class RNPickerSelect extends PureComponent {
         } = this.props;
         const { selectedItem } = this.state;
 
-        const Component = fixAndroidTouchableBug ? View : TouchableOpacity;
         return (
-            <Component
+            <View
                 testID="android_touchable_wrapper"
                 onPress={onOpen}
                 activeOpacity={1}
@@ -494,6 +493,7 @@ export default class RNPickerSelect extends PureComponent {
                             defaultStyles.headlessAndroidPicker,
                             style.headlessAndroidPicker,
                         ]}
+                        onFocus={onOpen}
                         testID="android_picker_headless"
                         enabled={!disabled}
                         onValueChange={this.onValueChange}
@@ -503,7 +503,7 @@ export default class RNPickerSelect extends PureComponent {
                         {this.renderPickerItems()}
                     </Picker>
                 </View>
-            </Component>
+            </View>
         );
     }
 
