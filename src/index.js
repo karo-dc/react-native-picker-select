@@ -488,6 +488,7 @@ export default class RNPickerSelect extends PureComponent {
                             style.headlessAndroidPicker,
                         ]}
                         onFocus={onOpen}
+                        numberOfLines={10000}
                         testID="android_picker_headless"
                         enabled={!disabled}
                         onValueChange={this.onValueChange}
